@@ -10,17 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
    // var rabbitImage = UIImage(named: "rabbit")
+    
+    
     //var lionImageView = UIImageView(image: lionImage)
   // var rabbitImageView = UIImageView(image:rabbitImage)
-    let penImageView = UIImageView(image:UIImage( named: "penge"))
+    //penImageView 如果設在這裡會只有一個圖
+//    let penImageView = UIImageView(image:UIImage( named: "rabbit"))
+    
     
     func getRabbit(X: CGFloat, Y: CGFloat, rotateDegree: CGFloat, scale: CGFloat) {
+        
+        
+        let penImageView = UIImageView(image:UIImage( named: "rabbit"))
         
         let rabbitDegree = CGFloat.pi/180
       
         
         
         penImageView.transform = CGAffineTransform(translationX: X, y:Y).rotated(by: rabbitDegree * rotateDegree).scaledBy(x: scale, y: scale)
+        
         
         view.addSubview(penImageView)
         
@@ -42,11 +50,11 @@ class ViewController: UIViewController {
    // view.addSubview(penImageView)
  //呼叫fUNC
         
-  getRabbit(X: 100, Y: 100, rotateDegree: 45, scale: 1)
+        getRabbit(X: -150, Y: 50, rotateDegree: 0, scale: 0.5)
 //
-  getRabbit(X: 100, Y:100, rotateDegree: 30, scale: 0.5)
+        getRabbit(X: -100, Y:150, rotateDegree: 30, scale: 0.3)
 //
- getRabbit(X: -50, Y: 150, rotateDegree: 45, scale: 0.2)
+        getRabbit(X: -80, Y: 200, rotateDegree: 45, scale: 0.2)
 //
     
     }
